@@ -1,0 +1,344 @@
+\pdfminorversion=7
+\documentclass[14pt]{beamer}
+\usepackage{helvet}
+\usepackage{ccfonts}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor,colortbl}
+\usepackage{graphics,color}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage[makeroom]{cancel}
+\usetheme{Warsaw}
+\usecolortheme[RGB={200,0,0}]{structure}
+\usefonttheme{serif}
+ \pagenumbering{gobble}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}
+{\leavevmode
+    \hbox{\begin{beamercolorbox}[wd=.46\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.46\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}
+            \usebeamerfont{title in head/foot}\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.08\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}
+            \usebeamerfont{date in head/foot}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \end{beamercolorbox}}
+        \vskip0pt}
+    \makeatother
+\usepackage{times}
+\newlength\figureheight
+\newlength\figurewidth
+\usepackage{pgfpages}
+\setbeamerfont{math}{size=\small}
+\setbeamerfont{mathtiny}{size=\footnotesize}
+\setbeamersize{text margin left=.20in}
+\setbeamersize{text margin right=.25in}
+\newenvironment{changemargin}[2]{
+  \begin{list}{}{
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{#1}
+    \setlength{\rightmargin}{#2}
+    \setlength{\listparindent}{\parindent}
+    \setlength{\itemindent}{\parindent}
+    \setlength{\parsep}{\parskip}
+  }
+  \item[]}{\end{list}}
+\renewcommand{\tabcolsep}{4pt}
+\newcommand{\beginbackup}{
+   \newcounter{framenumbervorappendix}
+   \setcounter{framenumbervorappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumbervorappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumbervorappendix}} 
+}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{Mfact}[theorem]{Fact}
+\newtheorem{mquest}[theorem]{Main Question}
+\newtheorem{Mtheorem}[theorem]{Theorem}
+\newtheorem{result}[theorem]{Result}
+\newtheorem{assumption}{Assumption}
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{enumerate items}[ball]
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{tabularx}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\setbeamerfont{institute}{size=\normalsize}
+
+\title[Gender, Competition, and Marathons in the Lab]{When Do Females Outperform Males? New Evidence from \\ Real Effort Experiments}
+\author[Hammond, Masclet, and Penard]{Bob Hammond}
+\institute[]{University of Alabama\\
+\bigskip
+(with David Masclet and Thierry Penard)}
+\date{October 30, 2021}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Gender and Competition}
+\begin{itemize}
+	\item Niederle in the Handbook of EE (2015): ``explosion of experimental work on gender differences in economics''
+	\item We look at robustness of gender differences in performance under competitive incentives
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marathons in the Lab}
+\begin{itemize}
+	\item 100 minutes of an increasingly difficult task
+	\item Large payoff from reaching finish line
+	\item But it's hard to finish
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivations from Observational Data}
+\begin{itemize}
+	%\item Track and field college scholarship athletes: more women than men (NCAA)
+	\item 61\% of road race runners are women (Running USA)
+	\item Claims that men are motivated to run by competitiveness more so than ``building social relationships'' or ``health and fitness''	(Deaner et al. 2015)
+	%\item Some evidence of gender differences in pacing, e.g., riskier strategies for men (Deaner et al. 2016)
+	\item Ultramarathons: ``The gender gap diminishes and disappears over distance. When you're traveling over 2,000 miles, it doesn't matter if you are male or female.''  (Scott Jurek, ultramarathoner)
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Ultramarathons}
+%\begin{itemize}
+	%\item ``The gender gap diminishes and disappears over distance. When you're traveling over 2,000 miles, it doesn't matter if you are male or female.''  (Scott Jurek, ultramarathoner)
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Real Effort Task}
+\begin{itemize}
+	\item Finding Letters on Pages task of Azar (2019)
+	\item Boring, tedious
+	\item Easy to scale up the difficulty
+	\item Hard for subjects to cheat
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marathons in the Lab}
+\begin{itemize}
+	\item 100 minutes of Finding Letters on Pages task
+	\item Finish line = finish 160 tasks 
+	\item Must solve correctly before moving to next task
+\end{itemize}
+\end{frame}
+
+\setbeamertemplate{background canvas}{\raisebox{-1.27\height}{\includegraphics[width=\paperwidth,trim=10 0 40 0,clip]{../2020.06.25_Marathon/Screen1_Edit.jpg}}}
+\begin{frame}{zTree Interface: Less Difficult Task}
+\end{frame}
+\setbeamertemplate{background canvas}{}
+
+\setbeamertemplate{background canvas}{\raisebox{-1.2\height}{\includegraphics[width=\paperwidth,trim=20 0 90 0,clip]{../2020.06.25_Marathon/Screen9_Edit.jpg}}}
+\begin{frame}{zTree Interface: More Difficult Task}
+\end{frame}
+\setbeamertemplate{background canvas}{}
+
+\begin{frame}{Competitive Incentives}
+\begin{itemize}
+	\item \$40 for finishing all 160 tasks 
+	\item Groups of 3 subjects (fixed matching)
+	\item Between-subjects design
+	\item Three treatments:
+	\begin{enumerate}
+		\item Baseline
+		\item Leaderboard: payoff irrelevant relative performance feedback shown after every $10\textsuperscript{th}$ task 
+		\item Bonus: leaderboard plus \$4 bonus for finishing first in group
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cost of Effort}
+\begin{itemize}
+	\item Font size gets smaller and smaller 
+	\item Line and position are randomized across tasks
+	\item 160 tasks in 100 minutes = 37.5 seconds/task on average
+	\item Result: subjects average 31.3 seconds/task on most difficult tasks (among subjects who reached those tasks)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sessions}
+\begin{itemize}
+	\item Experiments run in 2021 at the TIDE Lab at the University of Alabama 
+	\item For today's talk, 66 subjects 
+	\begin{itemize}
+		\item 21, 24, and 21 in baseline, leaderboard, and bonus treatments, respectively
+	\end{itemize}
+	\item 60.6\% female, 39.4\% male
+	\item Did not recruit by gender, group by gender, or ``prime'' gender to subjects
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Earnings}
+\begin{itemize}
+	\item Take-home earnings $\in$ [\$14.80, \$55.00]
+	\begin{itemize}
+		\item Mean = \$43.92, median = \$50.00
+	\end{itemize}
+	\item Show-up payment = \$10
+	\item 25 cents/task completed if subject finishes
+	\item 15 cents/task completed if not (e.g., 32 tasks = \$4.80)
+	\item Belief elicitation: \$1 if accurate
+	\item Bonus treatment: \$4 for finishing first in group
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Belief Elicitation}
+\begin{itemize}
+	\item Complete two practice tasks
+	\item Then asked to report belief of finishing time 
+	\begin{enumerate}
+		\item Before 75min 
+		\item Between 75min and 85min
+		\item Between 85min and 95min
+		\item Between 95min and 100min
+		\item Can't finish before 100min
+	\end{enumerate}
+	\item Paid \$1 if correct
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Outcome Variable Means}
+\begin{table}
+\begin{tabular}{lcc}
+\toprule
+ & Time (min) & Tasks completed \\
+\midrule
+Did not finish &  100.0 & 121.8 \\
+Finished & 77.6 & 160.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Rates of reaching finish line
+	\begin{itemize}
+		\item Female = 65\%
+		\item Male = 77\%
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,trim=0 0 00 0,clip]{../Data/mns_distri_over_female_long.pdf}}
+\begin{frame}{}
+\end{frame}
+\setbeamertemplate{background canvas}{}
+
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,trim=0 0 00 0,clip]{../Data/mns_distri_over_tr_long.pdf}}
+\begin{frame}{}
+\end{frame}
+\setbeamertemplate{background canvas}{}
+
+\begin{frame}{Tobit Regression Analysis of Time Spent}
+\begin{table}
+\begin{tabular}{lcc}
+\toprule
+ & (1) \\
+\midrule
+Leaderboard	& -20.71 \\
+	& (8.22)\sym{**} \\
+Bonus & -14.94 \\
+	& (7.61)\sym{*} \\
+Female &	-16.32 \\
+	& (8.22)\sym{*} \\
+Leaderboard\#Female & 19.45  \\
+	&(10.28)\sym{*} \\
+Bonus\#Female & 35.70  \\
+	& (8.28)\sym{***} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Tobit Marginal Effects}
+\begin{itemize}
+	\item Marginal effect of female
+\end{itemize}
+\begin{table}
+\begin{tabular}{lcc}
+\toprule
+ & (1) \\
+\midrule
+Baseline & -11.82 \\
+	& (5.01)\sym{**} \\
+Leaderboard	& 2.60 \\
+	& (5.74) \\
+Bonus & 11.86 \\
+	& (6.38)\sym{*} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Mechanisms Behind This?}
+\begin{itemize}
+	\item Is there a leaderboard effect?
+	\item For today's talk, look graphically
+\end{itemize}
+\end{frame}
+
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,trim=0 0 00 0,clip]{../Data/msn_by_task_40.pdf}}
+\begin{frame}{}
+\end{frame}
+\setbeamertemplate{background canvas}{}
+
+\begin{frame}{What Leaderboard Effects Do We See?}
+\begin{itemize}
+	\item Evidence of ``slowing down'' after seeing leaderboard
+	\begin{itemize}
+		\item ``I'm ahead''
+		\item ``I'm way behind''
+	\end{itemize}
+	\item Less evidence of `speeding up'' but mostly this happens as follows: fastest subject slows down, then next leaderboard observes a narrowing gap and speeds back up
+	\item Difficulty is isolating gender differences in responsiveness to feedback (if present) in systematic way 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions}
+\begin{itemize}
+	\item New evidence of differences in outcomes for men and women in environments as competitive incentives vary
+	\item In a marathon-like task, women outperform men on baseline 
+	\item But sharp reversal with relative performance feedback and winner bonuses 
+	\item For another talk: treatments with shorter task duration (marathon versus sprint) 
+\end{itemize}
+\end{frame}
+
+\beginbackup
+
+\begin{frame}{Leaderboard}
+\begin{figure}
+\includegraphics[width=\textwidth,trim=0 123 0 0,clip]{../2020.06.25_Marathon/Leaderboard_Long.jpg}
+\end{figure}
+\begin{itemize}
+	\item Leaderboard shown after every $10\textsuperscript{th}$ task 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Leaderboard}
+\begin{figure}
+\includegraphics[width=\textwidth]{../2020.06.25_Marathon/Leaderboard_Long.jpg}
+\end{figure}
+\end{frame}
+
+\backupend
+\end{document}
+
+
+We present new evidence on gender differences in responsiveness to competitive incentives.  Subjects participate in real effort experiments using the Finding Letters on Pages task of Azar (2019).  The experimental design uses treatment variation in task duration and competitive incentives.  In the baseline treatments, subjects are paid at a piece rate and are not given feedback about the performance of other subjects. A second set of treatments add relative performance feedback, while a third set of treatments add a relative performance bonus for achieving the highest performance in one’s group.  Our results shed light on when females outperform males in real effort tasks and how performance changes in response to feedback about others and to extrinsic relative performance rewards.
+
